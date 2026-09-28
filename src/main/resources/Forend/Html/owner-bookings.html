@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RideHub — Bookings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/owner-bookings.css">
+<link rel="stylesheet" href="../css/mass.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 4l9 6.5M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9" stroke="#4FA3A0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        RideHub <span class="owner-tag">Owner</span>
+      </div>
+      <nav class="nav-links">
+        <a href="owner-dashboard.html">Dashboard</a>
+        <a href="owner-vehicles.html">Vehicles</a>
+        <a href="owner-bookings.html" class="active">Bookings</a>
+        <button class="logout-btn" id="logoutBtn">Log out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>Bookings</h2>
+          <p class="sub">Mark a rental as completed once the customer returns the vehicle.</p>
+        </div>
+        <div class="filter-chips" id="filterChips">
+          <button class="chip active" data-filter="ALL">All</button>
+          <button class="chip" data-filter="PENDING_PAYMENT">Pending</button>
+          <button class="chip" data-filter="CONFIRMED">Confirmed</button>
+          <button class="chip" data-filter="COMPLETED">Completed</button>
+        </div>
+      </div>
+      <div id="bookingsMsg" class="inline-msg"></div>
+      <div class="booking-table" id="bookingTable"></div>
+    </section>
+  </main>
+
+<script src="../javascript/owner-bookings.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RideHub — Vehicles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shop.css">
+<link rel="stylesheet" href="../css/mass.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-4.5A2 2 0 016.4 7h11.2a2 2 0 011.9 1.5L21 13" stroke="#E7A94C" stroke-width="1.8" stroke-linecap="round"/><rect x="2.5" y="13" width="19" height="6" rx="2" stroke="#F5F1E7" stroke-width="1.8"/><circle cx="7" cy="19.5" r="1.6" fill="#F5F1E7"/><circle cx="17" cy="19.5" r="1.6" fill="#F5F1E7"/></svg>
+        RideHub
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="bookings.html">My bookings</a>
+        <button class="logout-btn" id="logoutBtn">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="back-link" id="backLink">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to shops
+    </div>
+
+    <div class="section-title" id="shopName">Vehicles</div>
+    <div class="section-sub" id="shopAddress"></div>
+
+    <div class="search-bar" style="margin-bottom:14px;">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input type="text" id="vehicleSearch" placeholder="Search vehicles by name…">
+    </div>
+
+    <div class="chip-row" id="chipRow">
+      <div class="chip active" data-type="ALL"></div>
+    </div>
+
+    <div id="vehiclesMsg" class="inline-msg"></div>
+    <div class="vehicle-grid" id="vehicleGrid"></div>
+  </main>
+
+<script src="../javascript/shop.js"></script>
+</body>
+</html>

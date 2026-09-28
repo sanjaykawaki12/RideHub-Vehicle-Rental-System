@@ -1,0 +1,4 @@
+package com.rental.entity;
+import com.fasterxml.jackson.annotation.JsonIgnore; import jakarta.persistence.*; import lombok.*; import java.time.LocalDateTime;
+@Entity @Table(name="reviews", uniqueConstraints=@UniqueConstraint(columnNames={"user_id","vehicle_id"})) @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+public class Review { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY) @JoinColumn(name="user_id",nullable=false) @JsonIgnore private User user; @ManyToOne(fetch=FetchType.EAGER) @JoinColumn(name="vehicle_id",nullable=false) private Vehicle vehicle; @Column(nullable=false) private Integer rating; @Column(length=1000) private String comment; private LocalDateTime createdAt; @PrePersist void onCreate(){createdAt=LocalDateTime.now();} }

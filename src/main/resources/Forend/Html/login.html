@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RideHub — Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/mass.css">
+</head>
+<body>
+<div class="auth-shell">
+  <section class="auth-brand-panel">
+    <div class="brand"><span class="brand-mark">RH</span><span>Ride<span>Hub</span></span></div>
+    <div class="brand-copy">
+      <span class="eyebrow">VEHICLE RENTAL PLATFORM</span>
+      <h1>Rent the right ride.<br><span>From the right shop.</span></h1>
+      <p>Sign in to discover nearby rental shops, view their vehicles and book in a few simple steps.</p>
+    </div>
+    <div class="brand-points"><span>✓ Nearby rental shops</span><span>✓ Real vehicle photos</span><span>✓ Simple booking</span></div>
+  </section>
+  <main class="auth-card-wrap">
+    <div class="auth-card">
+      <div class="mobile-brand"><span class="brand-mark">RH</span><span>Ride<span>Hub</span></span></div>
+      <div class="auth-heading"><span class="eyebrow">WELCOME BACK</span><h2>Sign in</h2><p>Choose your account type and continue.</p></div>
+      <div class="role-switch" id="roleSwitch"><button type="button" class="active" data-role="USER">Customer</button><button type="button" data-role="OWNER">Owner</button></div>
+      <div id="msgBox" class="form-msg"></div>
+      <form id="loginForm">
+        <label>Email<input id="loginEmail" type="email" placeholder="you@example.com" autocomplete="email" required></label>
+        <label>Password<input id="loginPassword" type="password" placeholder="Your password" autocomplete="current-password" required></label>
+        <button class="primary-btn" id="loginBtn" type="submit"><span>Sign in</span></button>
+      </form>
+      <p class="switch-text">Don't have an account? <a href="register.html">Create account</a></p>
+    </div>
+  <p style="text-align:center;margin-top:16px"><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p></main>
+</div>
+<script src="../javascript/login.js"></script>
+</body>
+</html>

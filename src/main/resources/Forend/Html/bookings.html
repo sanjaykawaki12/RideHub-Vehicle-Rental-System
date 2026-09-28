@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RideHub — My Bookings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/bookings.css">
+<link rel="stylesheet" href="../css/mass.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-4.5A2 2 0 016.4 7h11.2a2 2 0 011.9 1.5L21 13" stroke="#E7A94C" stroke-width="1.8" stroke-linecap="round"/><rect x="2.5" y="13" width="19" height="6" rx="2" stroke="#F5F1E7" stroke-width="1.8"/><circle cx="7" cy="19.5" r="1.6" fill="#F5F1E7"/><circle cx="17" cy="19.5" r="1.6" fill="#F5F1E7"/></svg>
+        RideHub
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <button class="logout-btn" id="logoutBtn">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="section-title">My bookings</div>
+    <div id="bookingsMsg" class="inline-msg"></div>
+    <div id="bookingList"></div>
+
+    <div class="section-title" id="licenses" style="margin-top:36px; display:flex; align-items:center; justify-content:space-between;">
+      My driving licenses
+      <button class="book-now-btn" id="addLicenseBtn">+ Add license</button>
+    </div>
+    <div id="licenseMsg" class="inline-msg"></div>
+    <div id="licenseList"></div>
+  </main>
+
+  <div class="modal-overlay" id="licenseModal">
+    <div class="modal">
+      <button class="modal-close" id="closeLicenseModal">&times;</button>
+      <h3>Add driving license</h3>
+      <div id="licenseFormMsg" class="inline-msg"></div>
+      <form id="licenseForm">
+        <div class="field" style="margin-bottom:14px;">
+          <label for="licenseNumberInput">License number</label>
+          <input type="text" id="licenseNumberInput" required placeholder="TN0120230012345">
+        </div>
+        <div class="field" style="margin-bottom:14px;">
+          <label for="licenseFileInput">Upload photo / scan</label>
+          <input type="file" id="licenseFileInput" accept="image/*,.pdf" required>
+        </div>
+        <button class="submit-btn" type="submit" id="uploadLicenseBtn">Upload</button>
+      </form>
+    </div>
+  </div>
+
+<script src="../javascript/bookings.js"></script>
+</body>
+</html>

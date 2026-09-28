@@ -1,0 +1,20 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# Logs
+*.log
+
+# Uploaded files
+uploads/
+
+# Environment / secretsgit statusgit status
+.env
+application-local.properties
+
+# OS
+.DS_Store
+Thumbs.db
